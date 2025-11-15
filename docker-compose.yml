@@ -9,8 +9,8 @@ services:
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: vishalnair16
-      MONGO_INITDB_ROOT_PASSWORD: Admin1234
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
     command: ["python", "seed.py"]
     volumes:
       - mongodb_data:/data/db
@@ -50,7 +50,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - MONGO_URI=mongodb://admin:admin123@mongodb:27017/?authSource=admin
+      - MONGO_URI=mongodb://admin:<password>@mongodb:27017/?authSource=admin
       - DB_NAME=high_performance_db
       - REDIS_HOST=redis
       - REDIS_PORT=6379
