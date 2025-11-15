@@ -9,7 +9,7 @@ class Settings(BaseSettings):
     # MongoDB Settings
     # Option 1: Include database name in URI: mongodb+srv://user:pass@cluster.mongodb.net/database_name?appName=Cluster0
     # Option 2: Use DB_NAME separately (database name will be appended automatically)
-    MONGO_URI: str = os.getenv("MONGO_URI", "mongodb+srv://vishalnair16:Admin1234@cluster0.84iovxr.mongodb.net/?appName=Cluster0")
+    MONGO_URI: str = os.getenv("MONGO_URI", "mongodb+srv://username:password@cluster0.84iovxr.mongodb.net/?appName=Cluster0")
     DB_NAME: str = os.getenv("DB_NAME", "high_performance_db")
     
     # Redis Settings
