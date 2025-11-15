@@ -19,7 +19,7 @@ That's it! All services will start automatically.
 
 2. **Seed database:**
    ```bash
-   docker exec -it high_perf_backend python seed.py
+   docker-compose exec backend python -m app.utils.seed_data
    ```
 
 3. **Open your browser:**
